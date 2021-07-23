@@ -29,6 +29,7 @@ dependencies {
 shadowJar {
     archiveFileName.set(archivesBaseName + ".jar")
     exclude 'javax/**'
+    relocate("net.lapismc.lapiscore", "net.lapismc.arrowping.util.core")
 }
 
 processResources {
