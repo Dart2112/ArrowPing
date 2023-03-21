@@ -1,5 +1,5 @@
 name: ArrowPing
 version: ${project.version}
 main: net.lapismc.arrowping.ArrowPing
-api-version: 1.13
+api-version: 1.19
 description: Goes ping when arrow hits mobs
