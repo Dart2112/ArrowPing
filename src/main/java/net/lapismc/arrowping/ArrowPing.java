@@ -7,7 +7,7 @@ public final class ArrowPing extends LapisCorePlugin {
     @Override
     public void onEnable() {
         new ArrowPingListener(this);
-        getLogger().info(getName() + " v." + getDescription().getVersion() + " has been enabled!");
+        super.onEnable();
     }
 
 }

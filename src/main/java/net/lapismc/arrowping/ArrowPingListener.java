@@ -1,8 +1,8 @@
 package net.lapismc.arrowping;
 
-import net.lapismc.lapiscore.compatibility.XSound;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
+import org.bukkit.Sound;
 import org.bukkit.entity.Arrow;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.event.EventHandler;
@@ -19,7 +19,7 @@ public class ArrowPingListener implements Listener {
     public void arrowHitEvent(EntityDamageByEntityEvent e) {
         //Check if the hit was from an arrow
         if (!(e.getDamager() instanceof Arrow)) {
-            //Ignore if its not an arrow
+            //Ignore if it's not an arrow
             return;
         }
         //Check if the thing that shot the arrow was a living entity e.g. not a dispenser
@@ -29,7 +29,7 @@ public class ArrowPingListener implements Listener {
         //Get the location of the entity that shot the arrow
         Location loc = ((LivingEntity) ((Arrow) e.getDamager()).getShooter()).getLocation();
         //Play a sound at the entity to signify that they hit another entity
-        loc.getWorld().playSound(loc, XSound.ENTITY_ARROW_HIT_PLAYER.parseSound(), 1f, 1f);
+        loc.getWorld().playSound(loc, Sound.ENTITY_ARROW_HIT_PLAYER, 1f, 1f);
     }
 
 }
