@@ -6,6 +6,7 @@ public final class ArrowPing extends LapisCorePlugin {
 
     @Override
     public void onEnable() {
+        saveDefaultConfig();
         new ArrowPingListener(this);
         super.onEnable();
     }

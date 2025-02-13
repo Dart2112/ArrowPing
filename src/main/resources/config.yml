@@ -1,0 +1,19 @@
+#The sound to play, this site can be used to find the name of sounds https://www.digminecraft.com/lists/sound_list_pc.php
+PingSound: "entity.arrow.hit_player"
+
+#If true, players near the shooter will hear the Ping on hit
+#If false only the shooter will hear it, this will effectively disable Skeleton and Dispenser shooters
+PlayAloud: true
+
+#Who will play a sound when they hit a valid target
+#For Skeletons and Dispensers, PlayOutLoud must be set to true
+Shooters:
+  Players: true
+  Skeletons: true
+  Dispensers: true
+
+#What should count as a valid target, the Ping sound will only play if an enabled shooter hits an enabled target
+Targets:
+  Players: true
+  HostileMobs: true
+  PassiveMobs: true
